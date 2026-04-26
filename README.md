@@ -59,7 +59,7 @@ One of the most appealing aspects of this method is its efficiency. Mitigating h
 
 Furthermore, the method is entirely model-agnostic and prompt-agnostic. It does not rely on text-to-image alignment models that might introduce their own biases, and it can be plugged into almost any existing multimodal architecture. 
 
-While it is not perfect—in highly cluttered scenes, the ViT might struggle to perfectly isolate the right objects—it proves that we don't always need to retrain massive models to make them more reliable. Sometimes, teaching a model to recognize its own hallucinations simply requires knowing exactly what to hide from it.
+While it is not perfect (in highly cluttered scenes, the ViT might struggle to perfectly isolate the right objects) it proves that we do not always need to retrain massive models to make them more reliable.
 
 ## Related Work
 
