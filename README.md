@@ -19,7 +19,7 @@ VCD works by comparing two different predictions from the model during the text 
 
 The core idea is simple: if the model predicts the word *frisbee* when looking at the clear image, but also predicts the word *frisbee* when looking at a heavily blurred or distorted image, it means the model is not actually detecting the frisbee. It is just guessing based on language priors. VCD subtracts the auxiliary prediction from the original prediction, effectively suppressing these hallucinated, ungrounded words.
 
-However, previous methods for corrupting the image are flawed. They relied on random noise, global blurring, or cross-modal models that depended heavily on the text prompt. These distortions are not aligned with the actual boundaries of objects in the image, meaning they might fail to properly obscure the visual evidence. 
+However, previous methods for corrupting the image are flawed. They rely on random noise, global blurring, or cross-modal models that depended heavily on the text prompt. These distortions are not aligned with the actual boundaries of objects in the image, meaning they might fail to properly obscure the visual evidence. 
 
 ## The Breakthrough: Masking What Matters
 Instead of randomly distorting the image, the authors propose constructing an object-aligned auxiliary view. They achieve this by using the attention maps from a self-supervised Vision Transformer (specifically, [DINO](https://arxiv.org/abs/2104.14294)). 
